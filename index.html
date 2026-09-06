@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>오디세이 ODYSSEY | 대청호 레이크뷰 프리미엄 소고기 뷔페 & 와인 다이닝</title>
+  <meta name="description" content="잔잔한 대청호 물결 위, 맛과 분위기의 미식 여정. 통창 파노라마 호수뷰, 100대 대형 주차장, 비법 양념 소고기 불고기 무한리필과 소믈리에 와인 페어링." />
+  <meta name="keywords" content="오디세이, 대청호맛집, 대청호소고기뷔페, 대전드라이브, 대청호데이트, 소고기불고기, 와인다이닝, 청주맛집, 세종맛집" />
+
+  <!-- Open Graph / SNS 공유 최적화 -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="오디세이 ODYSSEY | 대청호 레이크뷰 프리미엄 소고기 뷔페 & 와인" />
+  <meta property="og:description" content="2030을 위한 대청호 감성 핫플레이스. 시원한 호수뷰와 비법 불고기, 완벽한 와인 한 잔." />
+  <meta property="og:image" content="./assets/images/hero.jpg" />
+
+  <!-- Google Fonts & Pretendard -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              forest: '#0a1612',
+              darkgreen: '#11221c',
+              gold: '#d4af37',
+              goldLight: '#f3e5ab',
+              goldHover: '#b89628',
+              amber: '#e6953b',
+              wine: '#6a1a24',
+              surface: 'rgba(17, 34, 28, 0.75)',
+            }
+          },
+          fontFamily: {
+            sans: ['Pretendard', 'Plus Jakarta Sans', 'sans-serif'],
+            serif: ['Cormorant Garamond', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* 커스텀 글래스모피즘 & 애니메이션 스타일 */
+    .glass-nav {
+      background: rgba(10, 22, 18, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    }
+    .glass-card {
+      background: rgba(16, 32, 26, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.18);
+    }
+    .glass-card:hover {
+      border-color: rgba(212, 175, 55, 0.45);
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.15);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #f7e7b4 0%, #d4af37 50%, #aa8422 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-btn-gradient {
+      background: linear-gradient(135deg, #e4c465 0%, #d4af37 50%, #b89224 100%);
+    }
+    .gold-btn-gradient:hover {
+      background: linear-gradient(135deg, #eed37a 0%, #dfbb43 50%, #ca9f27 100%);
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+    }
+    .sunset-mode {
+      background: radial-gradient(circle at 50% 10%, rgba(194, 85, 37, 0.18) 0%, transparent 70%);
+    }
+    .night-mode {
+      background: radial-gradient(circle at 50% 10%, rgba(68, 30, 97, 0.18) 0%, transparent 70%);
+    }
+
+    /* 커스텀 스크롤바 */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080f0c;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #233b31;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d4af37;
+    }
+
+    /* 펄스 글로우 */
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+    .animate-pulse-glow {
+      animation: pulse-glow 3s infinite ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-[#0a1612] text-zinc-100 font-sans antialiased selection:bg-brand-gold selection:text-black">
+
+  <!-- ==============================================
+       1. Top Announcement Bar (일몰 시간 & 주차 안내 티커)
+  ============================================== -->
+  <div class="bg-gradient-to-r from-[#172d24] via-[#213f32] to-[#172d24] text-xs py-2 px-4 border-b border-brand-gold/20 text-brand-goldLight tracking-wider">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center justify-center bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full text-[11px] font-medium border border-amber-500/30">
+          <i class="fa-solid fa-sun mr-1 text-[10px]"></i> 오늘 노을 골든아워 18:40
+        </span>
+        <span class="hidden sm:inline text-zinc-300">| 초보도 편안한 100대 대형 전용 주차장 완비 (무료 3시간)</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <span class="text-zinc-300 flex items-center gap-1">
+          <i class="fa-solid fa-location-dot text-brand-gold"></i> 대청호 호숫가 바로 앞 (대전/청주/세종 25분)
+        </span>
+        <a href="#reservation" class="text-brand-gold font-semibold hover:underline flex items-center gap-1">
+          창가석 잔여석 조회 <i class="fa-solid fa-angle-right text-[9px]"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       2. Global Navigation Bar (GNB)
+  ============================================== -->
+  <header class="sticky top-0 z-50 glass-nav transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full border border-brand-gold/40 flex items-center justify-center bg-[#0d1f18] group-hover:border-brand-gold transition duration-300 shadow-md">
+          <i class="fa-solid fa-wine-glass text-brand-gold text-lg group-hover:scale-110 transition"></i>
+        </div>
+        <div>
+          <span class="font-serif text-2xl sm:text-3xl tracking-[0.18em] font-bold text-white group-hover:text-brand-goldLight transition">ODYSSEY</span>
+          <span class="block text-[10px] text-brand-gold/80 tracking-widest uppercase -mt-1 font-medium">대청호 소고기 뷔페 & 와인</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+        <a href="#story" class="text-zinc-300 hover:text-brand-gold transition">오디세이 스토리</a>
+        <a href="#menu" class="text-zinc-300 hover:text-brand-gold transition">대표 메뉴 & 와인</a>
+        <a href="#charms" class="text-zinc-300 hover:text-brand-gold transition">3대 핵심 매력</a>
+        <a href="#pricing" class="text-zinc-300 hover:text-brand-gold transition">코스 요금표</a>
+        <a href="#instagram" class="text-zinc-300 hover:text-brand-gold transition">인스타 포토존</a>
+        <a href="#location" class="text-zinc-300 hover:text-brand-gold transition">오시는 길·주차</a>
+      </nav>
+
+      <!-- Action Buttons (Desktop) -->
+      <div class="hidden lg:flex items-center gap-3">
+        <!-- 네이버 예약 바로가기 -->
+        <button onclick="openBookingModal('naver')" class="gold-btn-gradient text-neutral-950 font-bold px-4 py-2.5 rounded-full text-xs sm:text-sm tracking-wide transition transform hover:-translate-y-0.5 flex items-center gap-2 shadow-lg shadow-black/40">
+          <span class="w-4 h-4 bg-emerald-700 text-white rounded-sm inline-flex items-center justify-center text-[10px] font-black">N</span>
+          네이버 예약하기
+        </button>
+        <!-- 카카오맵 길찾기 -->
+        <button onclick="openKakaoMapModal()" class="bg-[#fae100] text-[#371d1e] font-bold px-3.5 py-2.5 rounded-full text-xs tracking-wide hover:bg-[#ebd300] transition flex items-center gap-1.5 shadow-md">
+          <i class="fa-solid fa-map-location-dot text-sm"></i> 길찾기
+        </button>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <button onclick="openBookingModal('quick')" class="gold-btn-gradient text-neutral-950 font-bold px-3 py-1.5 rounded-full text-xs">
+          예약
+        </button>
+        <button id="mobileMenuToggle" class="text-zinc-300 hover:text-white p-2" aria-label="메뉴 열기">
+          <i class="fa-solid fa-bars-staggered text-xl"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-brand-gold/15 bg-[#0a1612]/95 backdrop-blur-xl px-6 py-6 space-y-4 text-sm font-medium">
+      <a href="#story" class="block text-zinc-300 hover:text-brand-gold py-1" onclick="closeMobileMenu()">오디세이 스토리</a>
+      <a href="#menu" class="block text-zinc-300 hover:text-brand-gold py-1" onclick="closeMobileMenu()">대표 메뉴 (소고기 불고기) & 와인</a>
+      <a href="#charms" class="block text-zinc-300 hover:text-brand-gold py-1" onclick="closeMobileMenu()">3대 핵심 강점 (뷰·주차·감성)</a>
+      <a href="#pricing" class="block text-zinc-300 hover:text-brand-gold py-1" onclick="closeMobileMenu()">이용 안내 및 가격표</a>
+      <a href="#instagram" class="block text-zinc-300 hover:text-brand-gold py-1" onclick="closeMobileMenu()">인스타그램 핫플레이스 리뷰</a>
+      <a href="#location" class="block text-zinc-300 hover:text-brand-gold py-1" onclick="closeMobileMenu()">오시는 길 & 대형 주차장 안내</a>
+      <div class="pt-4 flex flex-col gap-2.5">
+        <button onclick="openBookingModal('naver')" class="w-full gold-btn-gradient text-neutral-950 font-bold py-3 rounded-xl text-center text-sm flex items-center justify-center gap-2">
+          <span class="w-4 h-4 bg-emerald-700 text-white rounded-sm inline-flex items-center justify-center text-[10px] font-black">N</span>
+          네이버 실시간 창가석 예약
+        </button>
+        <button onclick="openKakaoMapModal()" class="w-full bg-[#fae100] text-[#371d1e] font-bold py-3 rounded-xl text-center text-sm flex items-center justify-center gap-2">
+          <i class="fa-solid fa-car"></i> 카카오맵 길찾기 & 대형 주차장 안내
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==============================================
+       3. Hero Section (시원한 통창 대청호 & 불고기 & 노을 비주얼)
+  ============================================== -->
+  <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden">
+    
+    <!-- Hero Background Image (맞춤 렌더링 이미지) -->
+    <div class="absolute inset-0 z-0">
+      <img src="./assets/images/hero.jpg" alt="대청호 호수뷰와 소고기 불고기 와인 다이닝 오디세이" class="w-full h-full object-cover object-center scale-105 transition duration-1000 transform hover:scale-100" />
+      <!-- 감성 딥 그라데이션 오버레이 -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0a1612] via-[#0a1612]/70 to-[#0a1612]/40"></div>
+      <div class="absolute inset-0 bg-radial from-transparent via-[#0a1612]/30 to-[#0a1612]/80"></div>
+    </div>
+
+    <!-- Mood Atmosphere Switcher (2030 취향 저격 인터랙티브 감성 토글) -->
+    <div class="absolute top-6 right-4 sm:right-8 z-20 flex items-center gap-1.5 bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 text-xs text-zinc-300">
+      <span class="text-[11px] text-zinc-400 font-medium mr-1 hidden sm:inline"><i class="fa-solid fa-wand-magic-sparkles text-brand-gold"></i> VIEW MOOD:</span>
+      <button onclick="setHeroMood('sunset')" id="btnMoodSunset" class="px-2.5 py-1 rounded-full text-xs font-semibold bg-brand-gold/20 text-brand-goldLight border border-brand-gold/40 transition">
+        🌅 노을 골든아워
+      </button>
+      <button onclick="setHeroMood('day')" id="btnMoodDay" class="px-2.5 py-1 rounded-full text-xs font-semibold text-zinc-400 hover:text-white transition">
+        ☀️ 낮 윤슬 호수
+      </button>
+      <button onclick="setHeroMood('night')" id="btnMoodNight" class="px-2.5 py-1 rounded-full text-xs font-semibold text-zinc-400 hover:text-white transition">
+        🌙 로맨틱 와인나잇
+      </button>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20 sm:py-28">
+      
+      <!-- Subtitle Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-brand-goldLight text-xs sm:text-sm font-medium mb-6 tracking-widest uppercase shadow-lg">
+        <span class="w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>
+        대청호 전망을 품은 2030 프리미엄 소고기 다이닝
+      </div>
+
+      <!-- Main Headline (기획서 헤드카피 100% 반영) -->
+      <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight sm:leading-tight mb-6 text-white tracking-tight">
+        잔잔한 대청호 물결 위,<br />
+        <span class="gold-gradient-text italic font-normal">맛과 분위기의 미식 여정</span> — 오디세이
+      </h1>
+
+      <!-- Subheadline (기획서 서브카피) -->
+      <p class="text-zinc-200 text-sm sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-light mb-10 text-shadow">
+        드라이브의 끝에서 마주하는 탁 트인 파노라마 호수뷰,<br class="hidden sm:block" />
+        특제 비법 양념 소고기 불고기와 소믈리에가 선별한 완벽한 와인 한 잔을 즐겨보세요.
+      </p>
+
+      <!-- Key Highlighting Tags -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 mb-10 text-xs sm:text-sm text-zinc-300 font-medium">
+        <span class="px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center gap-1.5">
+          <i class="fa-solid fa-water text-cyan-400"></i> 통창 파노라마 호수뷰
+        </span>
+        <span class="px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center gap-1.5">
+          <i class="fa-solid fa-fire-burner text-amber-400"></i> 비법 놋그릇 불고기 & 무한리필
+        </span>
+        <span class="px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center gap-1.5">
+          <i class="fa-solid fa-wine-glass text-rose-400"></i> 소믈리에 와인 페어링
+        </span>
+        <span class="px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center gap-1.5">
+          <i class="fa-solid fa-square-parking text-emerald-400"></i> 100대 광폭 무료 주차장
+        </span>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+        <button onclick="openBookingModal('naver')" class="w-full sm:w-auto gold-btn-gradient text-neutral-950 font-bold px-8 py-4 rounded-full text-base tracking-wide flex items-center justify-center gap-3 shadow-xl transform hover:-translate-y-1 transition duration-200">
+          <span class="w-5 h-5 bg-emerald-700 text-white rounded inline-flex items-center justify-center text-xs font-black">N</span>
+          네이버 창가석 실시간 예약
+        </button>
+        <a href="#menu" class="w-full sm:w-auto px-7 py-4 rounded-full glass-card hover:bg-white/10 text-white font-medium text-base tracking-wide flex items-center justify-center gap-2 transition duration-200">
+          <i class="fa-solid fa-utensils text-brand-gold"></i> 메뉴 & 요금 보기
+        </a>
+      </div>
+
+      <!-- Quick Trust Indicators -->
+      <div class="mt-14 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+        <div>
+          <div class="text-2xl sm:text-3xl font-bold font-serif text-brand-gold">20~30대</div>
+          <div class="text-xs text-zinc-400 mt-0.5">데이트·드라이브 선호 1위</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-bold font-serif text-brand-gold">100%</div>
+          <div class="text-xs text-zinc-400 mt-0.5">전 좌석 탁 트인 통창뷰</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-bold font-serif text-brand-gold">100대+</div>
+          <div class="text-xs text-zinc-400 mt-0.5">초보 환영 전용 광폭 주차</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-bold font-serif text-brand-gold">2~7만 원대</div>
+          <div class="text-xs text-zinc-400 mt-0.5">합리적인 런치 ~ VIP 와인 코스</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll Down Hint -->
+    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 text-center animate-bounce">
+      <a href="#story" class="text-zinc-400 hover:text-brand-gold text-xs tracking-widest uppercase flex flex-col items-center gap-1">
+        <span>EXPLORE</span>
+        <i class="fa-solid fa-chevron-down text-sm"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       4. Story & Brand Odyssey (오디세이 스토리)
+  ============================================== -->
+  <section id="story" class="py-24 sm:py-32 relative bg-gradient-to-b from-[#0a1612] via-[#0d1e17] to-[#0a1612] border-t border-b border-brand-gold/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Story Text Column -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 text-brand-gold text-xs font-semibold tracking-widest uppercase">
+            <span class="w-8 h-[1px] bg-brand-gold"></span>
+            The Odyssey Story
+          </div>
+          
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight">
+            답답한 도심을 벗어나 30분,<br />
+            대청호가 선물하는 <span class="gold-gradient-text">황홀한 미식의 순간</span>
+          </h2>
+
+          <p class="text-zinc-300 text-sm sm:text-base leading-relaxed font-light">
+            ‘오디세이(Odyssey)’는 끝없는 모험과 새로운 여정을 뜻합니다. 대청호 호숫가를 따라 기분 좋은 드라이브 끝에 도착하는 이곳은, 단순한 식사를 넘어 일상에 낭만을 선물하는 특별한 미식 공간입니다.
+          </p>
+
+          <p class="text-zinc-300 text-sm sm:text-base leading-relaxed font-light">
+            낮에는 호수 위를 수놓는 반짝이는 윤슬을, 해 질 녘에는 온 하늘을 붉게 물들이는 로맨틱한 노을을 바라보며 지글거리는 전통 놋그릇 불고기와 소믈리에가 엄선한 와인을 즐겨보세요.
+          </p>
+
+          <!-- 3 Checkpoints -->
+          <div class="pt-4 space-y-3.5">
+            <div class="flex items-start gap-3.5">
+              <div class="w-7 h-7 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 border border-brand-gold/30">
+                <i class="fa-solid fa-check text-xs"></i>
+              </div>
+              <div>
+                <strong class="text-white text-sm font-semibold">드라이브 코스 최적화된 위치</strong>
+                <p class="text-zinc-400 text-xs sm:text-sm mt-0.5">대전 대덕대로·유성IC 25분, 청주·세종 30분 내외로 주말 힐링 드라이브에 완벽합니다.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-7 h-7 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 border border-brand-gold/30">
+                <i class="fa-solid fa-check text-xs"></i>
+              </div>
+              <div>
+                <strong class="text-white text-sm font-semibold">초보 운전도 걱정 없는 100대 광폭 주차 공간</strong>
+                <p class="text-zinc-400 text-xs sm:text-sm mt-0.5">좁은 골목이나 주차 스트레스 없이, 탁 트인 전용 대형 주차장에 편안하게 주차하세요.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-7 h-7 rounded-full bg-brand-gold/20 text-brand-gold flex items-center justify-center flex-shrink-0 mt-0.5 border border-brand-gold/30">
+                <i class="fa-solid fa-check text-xs"></i>
+              </div>
+              <div>
+                <strong class="text-white text-sm font-semibold">2030 취향 저격 감성 인테리어 & BGM</strong>
+                <p class="text-zinc-400 text-xs sm:text-sm mt-0.5">인스타 릴스·스토리 감성을 충족하는 통창 뷰와 감각적인 라운지 음악이 흐릅니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="#charms" class="inline-flex items-center gap-2 text-brand-gold hover:text-brand-goldLight text-sm font-semibold group">
+              오디세이 3대 핵심 매력 더 알아보기
+              <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1.5 transition"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Story Visual Grid -->
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4 relative">
+          <!-- Floating Badge -->
+          <div class="absolute -top-4 -left-4 z-20 glass-card px-4 py-2.5 rounded-2xl text-xs font-semibold text-brand-goldLight shadow-xl flex items-center gap-2 border border-brand-gold/30 animate-pulse-glow">
+            <i class="fa-solid fa-heart text-rose-500"></i> 2030 데이트 코스 핫플레이스
+          </div>
+
+          <div class="space-y-4">
+            <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl group">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80" alt="정갈하고 신선한 소고기 불고기 구이" class="w-full h-64 sm:h-72 object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl group">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80" alt="시원하고 평화로운 호수 풍경" class="w-full h-44 sm:h-52 object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-8">
+            <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl group">
+              <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=700&q=80" alt="분위기 있는 와인 글래스와 다이닝" class="w-full h-44 sm:h-52 object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-white/10 shadow-2xl group">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="트렌디하고 감각적인 다이닝 레스토랑 인테리어" class="w-full h-64 sm:h-72 object-cover group-hover:scale-110 transition duration-700" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       5. 3 Core Charms (핵심 강점 3가지: 뷰, 주차, 감성)
+  ============================================== -->
+  <section id="charms" class="py-24 relative bg-[#0a1612]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Why 2030 Loves Odyssey</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2 mb-4">
+          오디세이를 선택할 수밖에 없는 <span class="gold-gradient-text">3가지 이유</span>
+        </h2>
+        <p class="text-zinc-400 text-sm sm:text-base">
+          드라이브의 설렘부터 창밖 풍경, 그리고 완벽한 요리까지 2030 세대의 눈높이에 맞춘 차별화된 경험을 약속합니다.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Charm 1: 대청호 호수뷰 -->
+        <div class="glass-card rounded-3xl p-8 relative overflow-hidden transition-all duration-300 group flex flex-col justify-between">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-3xl group-hover:bg-cyan-500/20 transition"></div>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-[#142d23] border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-2xl mb-6 group-hover:scale-110 transition">
+              <i class="fa-solid fa-water"></i>
+            </div>
+            <span class="text-xs font-serif text-brand-gold tracking-widest font-semibold uppercase">CHARM 01</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mt-1 mb-3">
+              전 좌석 통창 파노라마<br />
+              <span class="text-cyan-300">대청호 호수뷰 (Lake View)</span>
+            </h3>
+            <p class="text-zinc-300 text-sm leading-relaxed font-light mb-6">
+              어느 자리에 앉아도 탁 트인 대청호 물결이 한눈에 펼쳐집니다. 푸르른 낮의 물결과 황홀하게 붉어지는 노을 골든아워는 그 자체로 인스타 인생샷의 배경이 됩니다.
+            </p>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-white/10 h-44">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80" alt="대청호 호수뷰 전경" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+        </div>
+
+        <!-- Charm 2: 대형 전용 주차장 -->
+        <div class="glass-card rounded-3xl p-8 relative overflow-hidden transition-all duration-300 group flex flex-col justify-between">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl group-hover:bg-emerald-500/20 transition"></div>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-[#142d23] border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl mb-6 group-hover:scale-110 transition">
+              <i class="fa-solid fa-square-parking"></i>
+            </div>
+            <span class="text-xs font-serif text-brand-gold tracking-widest font-semibold uppercase">CHARM 02</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mt-1 mb-3">
+              초보 운전자도 칼주차!<br />
+              <span class="text-emerald-300">100대 대형 광폭 주차장</span>
+            </h3>
+            <p class="text-zinc-300 text-sm leading-relaxed font-light mb-6">
+              데이트나 모임 전 주차난으로 스트레스받지 마세요. 대청호 식당가 최대 규모의 단독 전용 주차장을 완비하여 초보 운전자도 문콕 걱정 없이 여유롭게 주차 가능합니다.
+            </p>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-white/10 h-44">
+            <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=600&q=80" alt="넓고 쾌적한 전용 주차 공간" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+        </div>
+
+        <!-- Charm 3: 감성 공간 & 와인 페어링 -->
+        <div class="glass-card rounded-3xl p-8 relative overflow-hidden transition-all duration-300 group flex flex-col justify-between">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-3xl group-hover:bg-amber-500/20 transition"></div>
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-[#142d23] border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl mb-6 group-hover:scale-110 transition">
+              <i class="fa-solid fa-champagne-glasses"></i>
+            </div>
+            <span class="text-xs font-serif text-brand-gold tracking-widest font-semibold uppercase">CHARM 03</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white mt-1 mb-3">
+              감성 인테리어 &<br />
+              <span class="text-amber-300">전문 소믈리에 와인 페어링</span>
+            </h3>
+            <p class="text-zinc-300 text-sm leading-relaxed font-light mb-6">
+              놋그릇에 지글지글 익어가는 프리미엄 소고기 불고기와 소믈리에가 엄선한 레드/화이트/스파클링 와인의 환상적인 궁합! 미니멀하고 세련된 인테리어는 어디서 찍어도 인생샷입니다.
+            </p>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-white/10 h-44">
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80" alt="소믈리에 와인 페어링" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       6. Signature Menu & Wine Pairing (대표 메뉴 & 와인)
+  ============================================== -->
+  <section id="menu" class="py-24 sm:py-32 relative bg-gradient-to-b from-[#0a1612] via-[#0e1f18] to-[#0a1612] border-t border-b border-brand-gold/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Gourmet & Dining</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-2 mb-4">
+          오디세이 대표 메뉴 & <span class="gold-gradient-text">와인 페어링</span>
+        </h2>
+        <p class="text-zinc-400 text-sm sm:text-base">
+          숙성 소고기의 깊은 육향과 비법 과일 양념의 조화, 그리고 소믈리에가 선별한 글래스 와인의 마리아주
+        </p>
+      </div>
+
+      <!-- Main Feature: 비법 양념 소고기 불고기 Showcase -->
+      <div class="glass-card rounded-3xl p-6 sm:p-10 mb-16 border border-brand-gold/30">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-semibold border border-brand-gold/40">
+              <i class="fa-solid fa-crown"></i> SIGNATURE MENU
+            </div>
+            
+            <h3 class="text-2xl sm:text-4xl font-serif font-bold text-white">
+              비법 양념 소고기 불고기<br />
+              <span class="text-zinc-400 text-base sm:text-xl font-normal font-sans">Traditional Brass Pan Beef Bulgogi</span>
+            </h3>
+
+            <p class="text-zinc-300 text-sm sm:text-base leading-relaxed font-light">
+              오디세이의 시그니처 메뉴인 소고기 불고기는 엄선된 최고급 소고기를 황금 비율의 천연 과일 비법 양념에 48시간 저온 숙성하여 완성됩니다. 열전도율이 뛰어난 전통 황동 놋그릇 판 위에서 지글거리며 구워져 육즙을 촉촉하게 가두고 은은한 풍미를 선사합니다.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+              <div class="bg-[#12241d] p-3.5 rounded-xl border border-white/5">
+                <span class="text-brand-gold text-xs font-semibold block">육질 & 숙성</span>
+                <span class="text-white text-sm font-bold">1++ 프라임 비프 48h</span>
+              </div>
+              <div class="bg-[#12241d] p-3.5 rounded-xl border border-white/5">
+                <span class="text-brand-gold text-xs font-semibold block">특제 양념</span>
+                <span class="text-white text-sm font-bold">천연 배·사과 비법 소스</span>
+              </div>
+              <div class="bg-[#12241d] p-3.5 rounded-xl border border-white/5">
+                <span class="text-brand-gold text-xs font-semibold block">플레이팅</span>
+                <span class="text-white text-sm font-bold">전통 황동 놋그릇 서빙</span>
+              </div>
+            </div>
+
+            <div class="pt-2 flex items-center gap-4">
+              <button onclick="openBookingModal('menu-bulgogi')" class="gold-btn-gradient text-neutral-950 font-bold px-6 py-3 rounded-full text-xs sm:text-sm tracking-wide">
+                시그니처 불고기 코스 예약하기
+              </button>
+              <span class="text-xs text-zinc-400">모든 코스에서 무한리필 이용 가능</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="relative rounded-2xl overflow-hidden border border-brand-gold/30 shadow-2xl group">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="비법 양념 소고기 불고기" class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition duration-700" />
+              <div class="absolute bottom-4 left-4 right-4 glass-card p-3 rounded-xl text-xs text-zinc-200 backdrop-blur-md">
+                <i class="fa-solid fa-circle-info text-brand-gold mr-1"></i> 당일 공수한 신선한 버섯과 제철 파채가 놋그릇에 듬뿍 곁들여집니다.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Buffet & Wine Pairing Interactive Selector -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: 프리미엄 소고기 뷔페 바 소개 -->
+        <div class="lg:col-span-6 glass-card rounded-3xl p-8 border border-white/10">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <span class="text-brand-gold text-xs font-semibold uppercase tracking-wider">Unlimited Buffet</span>
+              <h4 class="text-xl sm:text-2xl font-bold text-white">프리미엄 소고기 뷔페 & 샐러드바</h4>
+            </div>
+            <span class="text-2xl text-emerald-400"><i class="fa-solid fa-leaf"></i></span>
+          </div>
+
+          <p class="text-zinc-300 text-sm leading-relaxed mb-6 font-light">
+            불고기뿐만 아니라 부채살, 토시살, 우삼겹 등 엄선된 다양한 소고기 부위와 30여 종의 신선한 쌈채소, 수제 드레싱 샐러드바, 제철 핫디쉬를 무제한으로 만끽할 수 있습니다.
+          </p>
+
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center justify-between p-3 rounded-xl bg-[#11241c] text-xs sm:text-sm">
+              <span class="text-white flex items-center gap-2"><i class="fa-solid fa-circle text-[8px] text-brand-gold"></i> 특선 소고기 구이 셀렉션</span>
+              <span class="text-zinc-400">부채살, 토시살, 갈비살, 우삼겹 무제한</span>
+            </div>
+            <div class="flex items-center justify-between p-3 rounded-xl bg-[#11241c] text-xs sm:text-sm">
+              <span class="text-white flex items-center gap-2"><i class="fa-solid fa-circle text-[8px] text-brand-gold"></i> 파머스 오가닉 샐러드바</span>
+              <span class="text-zinc-400">당일 수확 친환경 쌈채소 & 시저 샐러드</span>
+            </div>
+            <div class="flex items-center justify-between p-3 rounded-xl bg-[#11241c] text-xs sm:text-sm">
+              <span class="text-white flex items-center gap-2"><i class="fa-solid fa-circle text-[8px] text-brand-gold"></i> 셰프 스페셜 핫디쉬</span>
+              <span class="text-zinc-400">소고기 된장찌개, 육회 초밥, 트러플 감자튀김</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden h-44">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=80" alt="소고기 뷔페 및 신선한 샐러드바" class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- Right: 소믈리에 와인 페어링 인터랙티브 가이드 -->
+        <div class="lg:col-span-6 glass-card rounded-3xl p-8 border border-brand-gold/30">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <span class="text-brand-gold text-xs font-semibold uppercase tracking-wider">Sommelier Wine Pairing</span>
+              <h4 class="text-xl sm:text-2xl font-bold text-white">소믈리에 와인 셀렉션</h4>
+            </div>
+            <span class="text-2xl text-rose-400"><i class="fa-solid fa-wine-bottle"></i></span>
+          </div>
+
+          <p class="text-zinc-300 text-xs sm:text-sm font-light mb-4">
+            어떤 와인이 좋을지 고민되시나요? 원하시는 무드나 음식 취향을 선택해 보세요.
+          </p>
+
+          <!-- Interactive Wine Mood Buttons -->
+          <div class="flex flex-wrap gap-2 mb-6">
+            <button onclick="selectWinePairing('red')" id="btnWineRed" class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-rose-950/80 text-rose-200 border border-rose-500/50 transition">
+              🍷 소고기 불고기엔 풀바디 레드
+            </button>
+            <button onclick="selectWinePairing('white')" id="btnWineWhite" class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-zinc-800/80 text-zinc-300 border border-white/10 hover:border-brand-gold transition">
+              🥂 깔끔하고 상큼한 화이트
+            </button>
+            <button onclick="selectWinePairing('sparkling')" id="btnWineSparkling" class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-zinc-800/80 text-zinc-300 border border-white/10 hover:border-brand-gold transition">
+              ✨ 노을빛 감성 스파클링
+            </button>
+          </div>
+
+          <!-- Wine Recommendation Card Dynamic Display -->
+          <div id="wineDisplayCard" class="bg-[#14261f] p-5 rounded-2xl border border-brand-gold/20 transition-all duration-300">
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[11px] text-brand-gold font-medium">소믈리에 강력 추천 마리아주</span>
+                <h5 class="text-base sm:text-lg font-bold text-white mt-0.5">샤토 오디세이 리저브 카베르네 소비뇽</h5>
+                <p class="text-xs text-zinc-400 mt-0.5">Château Odyssey Cabernet Sauvignon (France)</p>
+              </div>
+              <span class="text-xs font-bold px-2.5 py-1 rounded bg-brand-gold/20 text-brand-goldLight border border-brand-gold/30">Red Wine</span>
+            </div>
+            
+            <p class="text-xs text-zinc-300 mt-3 leading-relaxed">
+              달콤 짭조름한 소고기 불고기의 육즙을 벨벳 같은 탄닌과 짙은 베리 아로마로 감싸주어 질리지 않고 풍성한 미식을 완성합니다.
+            </p>
+
+            <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs">
+              <span class="text-zinc-400">글래스 9,000원 / 바틀 45,000원부터</span>
+              <span class="text-brand-gold font-semibold">VIP 패키지 시 1글라스 무료 포함</span>
+            </div>
+          </div>
+
+          <div class="mt-6 flex items-center justify-between text-xs text-zinc-400">
+            <span>※ 논알콜 스파클링 와인 & 에이드 상시 구비 (운전자 안심)</span>
+            <button onclick="openBookingModal('wine')" class="text-brand-gold hover:underline font-medium">와인 리스트 문의 &rarr;</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       7. Pricing & Course Table (가격표 2만~7만원대 완벽 반영)
+  ============================================== -->
+  <section id="pricing" class="py-24 sm:py-32 relative bg-[#0a1612]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Transparent Pricing</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-2 mb-4">
+          오디세이 이용 안내 및 <span class="gold-gradient-text">코스 요금표</span>
+        </h2>
+        <p class="text-zinc-400 text-sm sm:text-base">
+          부담 없는 평일 점심부터 로맨틱한 노을 디너, 특별한 날을 위한 VIP 와인 페어링까지
+        </p>
+      </div>
+
+      <!-- Pricing Cards Grid (3단계 요금제) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        
+        <!-- Card 1: Odyssey Lunch (2~3만원대) -->
+        <div class="glass-card rounded-3xl p-8 border border-white/15 flex flex-col justify-between hover:border-brand-gold/40 transition duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/60 px-3 py-1 rounded-full border border-emerald-500/30">
+                평일 점심 특선
+              </span>
+              <span class="text-xs text-zinc-400">11:30 - 15:00</span>
+            </div>
+
+            <h3 class="text-2xl font-serif font-bold text-white mb-2">Odyssey Lunch</h3>
+            <p class="text-xs text-zinc-400 mb-6">부담 없는 가격으로 가볍게 즐기는 실속형 미식</p>
+
+            <div class="flex items-baseline gap-1 mb-6 pb-6 border-b border-white/10">
+              <span class="text-3xl sm:text-4xl font-bold font-serif text-white">28,000</span>
+              <span class="text-zinc-400 text-sm">원 / 1인</span>
+            </div>
+
+            <!-- Features List -->
+            <ul class="space-y-3.5 text-xs sm:text-sm text-zinc-300">
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>비법 양념 소고기 불고기 무한리필</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>신선 파머스 샐러드바 & 핫디쉬 무제한</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>소고기 된장찌개 & 갓 지은 솥밥</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>디저트 & 프리미엄 원두커피 바</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-zinc-500">
+                <i class="fa-solid fa-circle-xmark text-xs"></i>
+                <span>소고기 특수부위 구이 미포함</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-zinc-500">
+                <i class="fa-solid fa-circle-xmark text-xs"></i>
+                <span>창가 VIP 우선예약 제외</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/10">
+            <button onclick="openBookingModal('lunch')" class="w-full py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-semibold transition">
+              런치 스페셜 예약하기
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Signature Dinner & Weekend (대표 메뉴 / 4~5만원대) -->
+        <div class="glass-card rounded-3xl p-8 border-2 border-brand-gold relative flex flex-col justify-between shadow-2xl shadow-brand-gold/10 transform lg:-translate-y-3">
+          <!-- Popular Badge -->
+          <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-brand-gold to-amber-500 text-neutral-950 text-[11px] font-black uppercase px-4 py-1 rounded-full tracking-wider shadow-md">
+            ★ 2030 시그니처 대표 메뉴
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-4 mt-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-300 bg-amber-950/60 px-3 py-1 rounded-full border border-amber-500/30">
+                디너 & 주말 전일
+              </span>
+              <span class="text-xs text-brand-gold">노을 골든아워 추천</span>
+            </div>
+
+            <h3 class="text-2xl font-serif font-bold text-white mb-2">Signature Dinner</h3>
+            <p class="text-xs text-zinc-400 mb-6">대청호 노을과 함께 만나는 풀코스 소고기 특선</p>
+
+            <div class="flex items-baseline gap-1 mb-6 pb-6 border-b border-brand-gold/30">
+              <span class="text-3xl sm:text-4xl font-bold font-serif gold-gradient-text">48,000</span>
+              <span class="text-zinc-400 text-sm">원 / 1인</span>
+            </div>
+
+            <!-- Features List -->
+            <ul class="space-y-3.5 text-xs sm:text-sm text-zinc-300">
+              <li class="flex items-center gap-2.5 font-medium text-white">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>비법 양념 소고기 불고기 무한리필</span>
+              </li>
+              <li class="flex items-center gap-2.5 font-medium text-white">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>프리미엄 소고기 특수부위 특선 구이 무제한</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>신선 파머스 샐러드바 & 핫디쉬 전체 이용</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>수제 육회 & 트러플 사이드 메뉴 제공</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>창가 호수뷰 일반석 지정 가능</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>와인 주문 시 바틀 15% 특별 할인</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-brand-gold/20">
+            <button onclick="openBookingModal('dinner')" class="w-full py-3 rounded-xl gold-btn-gradient text-neutral-950 text-xs sm:text-sm font-bold shadow-lg transition">
+              시그니처 디너 예약하기
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Odyssey VIP Wine Package (6~7만원대) -->
+        <div class="glass-card rounded-3xl p-8 border border-brand-gold/30 flex flex-col justify-between hover:border-brand-gold transition duration-300">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-300 bg-rose-950/60 px-3 py-1 rounded-full border border-rose-500/30">
+                VIP 프리미엄 패키지
+              </span>
+              <span class="text-xs text-rose-300">창가 VIP석 100% 확정</span>
+            </div>
+
+            <h3 class="text-2xl font-serif font-bold text-white mb-2">VIP Wine Package</h3>
+            <p class="text-xs text-zinc-400 mb-6">최고급 소고기와 소믈리에 와인 페어링 파인다이닝</p>
+
+            <div class="flex items-baseline gap-1 mb-6 pb-6 border-b border-white/10">
+              <span class="text-3xl sm:text-4xl font-bold font-serif text-white">68,000</span>
+              <span class="text-zinc-400 text-sm">원 / 1인</span>
+            </div>
+
+            <!-- Features List -->
+            <ul class="space-y-3.5 text-xs sm:text-sm text-zinc-300">
+              <li class="flex items-center gap-2.5 text-brand-goldLight font-medium">
+                <i class="fa-solid fa-crown text-brand-gold text-xs"></i>
+                <span>대청호 정면 창가 VIP석 최우선 배정</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>소믈리에 추천 페어링 와인 1인 1글라스 (또는 논알콜)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>최고급 1++ 한우 특수부위 웰컴 플래터 제공</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>시그니처 불고기 & 소고기 뷔페 전체 무제한</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>전담 소믈리에 테이블 와인 브리핑 서비스</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-brand-gold text-xs"></i>
+                <span>기념일 폴라로이드 사진 촬영 & 디저트 레터링</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/10">
+            <button onclick="openBookingModal('vip')" class="w-full py-3 rounded-xl bg-gradient-to-r from-rose-900 via-rose-800 to-rose-900 hover:from-rose-800 hover:to-rose-700 text-white text-xs sm:text-sm font-semibold transition shadow-md">
+              VIP 와인 패키지 예약하기
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Group / Event Info Notice -->
+      <div class="mt-12 p-6 rounded-2xl glass-card border border-brand-gold/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-zinc-300">
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-users text-brand-gold text-xl"></i>
+          <div>
+            <strong class="text-white">단체 룸 및 대관 문의:</strong>
+            <span>최대 40인 수용 가능한 프라이빗 글래스 룸 보유 (회식, 가족모임, 브라이덜샤워 가능)</span>
+          </div>
+        </div>
+        <button onclick="alert('오디세이 단체/대관 문의 직통 전화: 042-863-9999 로 연결됩니다.')" class="px-4 py-2 rounded-full border border-brand-gold/40 text-brand-gold hover:bg-brand-gold/10 font-medium whitespace-nowrap">
+          단체 예약 문의하기
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       8. Instagram & Real-time Vibe Feed (2030 인스타 감성 리뷰 피드)
+  ============================================== -->
+  <section id="instagram" class="py-24 relative bg-gradient-to-b from-[#0a1612] via-[#0f231b] to-[#0a1612] border-t border-b border-brand-gold/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-start md:items-end justify-between mb-12">
+        <div>
+          <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Instagram Hotplace</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-1">
+            2030이 증명하는 <span class="gold-gradient-text">#오디세이 실시간 리뷰</span>
+          </h2>
+          <p class="text-zinc-400 text-sm mt-1">
+            대청호 뷰와 와인, 불고기를 즐긴 인플루언서와 고객님들의 리얼 모먼트
+          </p>
+        </div>
+
+        <div class="mt-4 md:mt-0 flex items-center gap-2">
+          <span class="text-xs text-zinc-400">태그 복사:</span>
+          <button onclick="copyHashTags()" class="px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-brand-goldLight text-xs font-medium border border-white/10 flex items-center gap-1.5 transition">
+            <i class="fa-brands fa-instagram text-pink-500"></i> #대청호오디세이 복사
+          </button>
+        </div>
+      </div>
+
+      <!-- Instagram Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        
+        <!-- Post 1 -->
+        <div class="group relative rounded-2xl overflow-hidden glass-card border border-white/10 aspect-square cursor-pointer" onclick="openInstaModal('d_min_love', '노을 질 때 통창 뷰 실화인가요.. 놋그릇 불고기도 진짜 부드럽고 레드와인이랑 찰떡궁합! 남친이랑 100일 기념일 성공적 🍷✨', 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80')">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="인스타그램 피드 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4 text-xs">
+            <span class="text-brand-gold font-bold mb-1">@d_min_love</span>
+            <p class="text-zinc-200 line-clamp-2">"노을 질 때 통창 뷰 실화인가요.. 불고기 육즙 미쳤어요"</p>
+            <div class="mt-2 text-zinc-400 flex items-center gap-3">
+              <span><i class="fa-solid fa-heart text-rose-500"></i> 1,420</span>
+              <span><i class="fa-solid fa-comment"></i> 88</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="group relative rounded-2xl overflow-hidden glass-card border border-white/10 aspect-square cursor-pointer" onclick="openInstaModal('travel_jun', '주차장 진짜 넓어서 초보운전인데도 한 번에 주차 완료! 대전에서 25분 드라이브 코스로 최고입니다 👍', 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=600&q=80')">
+          <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=600&q=80" alt="인스타그램 피드 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4 text-xs">
+            <span class="text-brand-gold font-bold mb-1">@travel_jun</span>
+            <p class="text-zinc-200 line-clamp-2">"초보운전인데 100대 광폭 주차장이라 너무 편했어요!"</p>
+            <div class="mt-2 text-zinc-400 flex items-center gap-3">
+              <span><i class="fa-solid fa-heart text-rose-500"></i> 982</span>
+              <span><i class="fa-solid fa-comment"></i> 42</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="group relative rounded-2xl overflow-hidden glass-card border border-white/10 aspect-square cursor-pointer" onclick="openInstaModal('somm_chloe', '소믈리에 추천 와인 페어링 코스 기대 이상이었어요. 뷔페 퀄리티가 아니라 파인다이닝 온 느낌 🥂', 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80')">
+          <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80" alt="인스타그램 피드 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4 text-xs">
+            <span class="text-brand-gold font-bold mb-1">@somm_chloe</span>
+            <p class="text-zinc-200 line-clamp-2">"소믈리에 추천 와인 페어링 코스 기대 이상!"</p>
+            <div class="mt-2 text-zinc-400 flex items-center gap-3">
+              <span><i class="fa-solid fa-heart text-rose-500"></i> 2,130</span>
+              <span><i class="fa-solid fa-comment"></i> 115</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="group relative rounded-2xl overflow-hidden glass-card border border-white/10 aspect-square cursor-pointer" onclick="openInstaModal('cafe_hopper', '대청호 호수 바라보며 먹는 소고기 뷔페라니.. 인테리어도 성수동 힙플레이스 뺨칩니다 📸', 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80')">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="인스타그램 피드 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-4 text-xs">
+            <span class="text-brand-gold font-bold mb-1">@cafe_hopper</span>
+            <p class="text-zinc-200 line-clamp-2">"창가 자리 앉으려면 네이버 예약 필수! 인생샷 건졌어요"</p>
+            <div class="mt-2 text-zinc-400 flex items-center gap-3">
+              <span><i class="fa-solid fa-heart text-rose-500"></i> 1,680</span>
+              <span><i class="fa-solid fa-comment"></i> 94</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       9. Location & Parking Map Guide (오시는 길 & 주차 상세 안내)
+  ============================================== -->
+  <section id="location" class="py-24 sm:py-32 relative bg-[#0a1612]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Easy Access & Parking</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2 mb-4">
+          오시는 길 & <span class="gold-gradient-text">대형 주차장 안내</span>
+        </h2>
+        <p class="text-zinc-400 text-sm sm:text-base">
+          대전, 청주, 세종에서 가장 가까운 대청호 드라이브 명소
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Interactive Map Visual Box -->
+        <div class="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-8 border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-location-dot text-brand-gold text-xl"></i>
+                <span class="font-bold text-white text-base sm:text-lg">오디세이 대청호 본점</span>
+              </div>
+              <span class="text-xs px-2.5 py-1 rounded bg-emerald-950 text-emerald-300 border border-emerald-500/30">
+                100대 주차 가능
+              </span>
+            </div>
+
+            <!-- Styled Map Simulation Preview -->
+            <div class="relative w-full h-72 sm:h-80 rounded-2xl overflow-hidden border border-white/10 mb-4 bg-zinc-900 group">
+              <!-- Background Map Mockup -->
+              <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" alt="지도 위치 안내" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition duration-700" />
+              
+              <!-- Lake Overlay Tag -->
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0a1612] via-transparent to-black/40 flex items-center justify-center">
+                <div class="text-center p-4 rounded-2xl bg-[#0a1612]/90 backdrop-blur-md border border-brand-gold/40 shadow-2xl max-w-xs">
+                  <div class="w-10 h-10 mx-auto rounded-full bg-brand-gold text-neutral-950 flex items-center justify-center font-bold mb-2 animate-bounce">
+                    <i class="fa-solid fa-utensils"></i>
+                  </div>
+                  <strong class="block text-white text-sm font-serif">ODYSSEY (오디세이)</strong>
+                  <span class="text-xs text-brand-goldLight">대전 대덕구 대청호수로 1234 (호수 바로 앞)</span>
+                  <div class="mt-3 flex items-center justify-center gap-2">
+                    <button onclick="openKakaoMapModal()" class="px-3 py-1.5 bg-[#fae100] text-[#371d1e] font-bold text-xs rounded-lg hover:bg-[#ebd300]">
+                      카카오맵 열기
+                    </button>
+                    <button onclick="alert('네이버지도 길찾기 페이지로 연결됩니다.')" class="px-3 py-1.5 bg-emerald-600 text-white font-bold text-xs rounded-lg hover:bg-emerald-500">
+                      네이버지도 열기
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <p class="text-xs text-zinc-400">
+              * 내비게이션(티맵, 카카오내비, 네이버 지도)에서 <strong class="text-white">"대청호 오디세이"</strong>를 검색하시면 전용 주차장 입구로 바로 안내됩니다.
+            </p>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs">
+            <span class="text-zinc-300"><i class="fa-solid fa-clock text-brand-gold mr-1"></i> 매일 11:30 - 21:30 (라스트오더 20:30)</span>
+            <span class="text-zinc-300"><i class="fa-solid fa-phone text-brand-gold mr-1"></i> 042-863-9999</span>
+          </div>
+
+        </div>
+
+        <!-- Drive & Parking Detailed Guide Card -->
+        <div class="lg:col-span-5 glass-card rounded-3xl p-6 sm:p-8 border border-white/10 flex flex-col justify-between">
+          <div class="space-y-6">
+            <span class="text-xs font-serif text-brand-gold tracking-widest font-semibold uppercase">Drive Time Guide</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-white">주요 도심 드라이브 소요시간</h3>
+
+            <div class="space-y-3.5 text-xs sm:text-sm">
+              <div class="flex items-center justify-between p-3.5 rounded-xl bg-[#12241d] border border-white/5">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-6 h-6 rounded-full bg-cyan-900/60 text-cyan-300 flex items-center justify-center text-xs">🚗</span>
+                  <span class="text-white font-medium">대전 둔산동 / 정부청사</span>
+                </div>
+                <span class="text-brand-gold font-bold">약 25분 소요</span>
+              </div>
+
+              <div class="flex items-center justify-between p-3.5 rounded-xl bg-[#12241d] border border-white/5">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-6 h-6 rounded-full bg-cyan-900/60 text-cyan-300 flex items-center justify-center text-xs">🚗</span>
+                  <span class="text-white font-medium">대전 유성온천 / 도안신도시</span>
+                </div>
+                <span class="text-brand-gold font-bold">약 28분 소요</span>
+              </div>
+
+              <div class="flex items-center justify-between p-3.5 rounded-xl bg-[#12241d] border border-white/5">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-6 h-6 rounded-full bg-emerald-900/60 text-emerald-300 flex items-center justify-center text-xs">🚗</span>
+                  <span class="text-white font-medium">청주 상당구 / 서원구</span>
+                </div>
+                <span class="text-emerald-400 font-bold">약 30분 소요</span>
+              </div>
+
+              <div class="flex items-center justify-between p-3.5 rounded-xl bg-[#12241d] border border-white/5">
+                <div class="flex items-center gap-2.5">
+                  <span class="w-6 h-6 rounded-full bg-purple-900/60 text-purple-300 flex items-center justify-center text-xs">🚗</span>
+                  <span class="text-white font-medium">세종 보람동 / 나성동</span>
+                </div>
+                <span class="text-purple-300 font-bold">약 35분 소요</span>
+              </div>
+            </div>
+
+            <!-- Parking Highlights -->
+            <div class="p-4 rounded-2xl bg-[#0f281e] border border-emerald-500/30">
+              <h4 class="text-sm font-bold text-emerald-300 flex items-center gap-2 mb-2">
+                <i class="fa-solid fa-circle-check"></i> 초보 운전자 맞춤 안심 주차 시스템
+              </h4>
+              <ul class="text-xs text-zinc-300 space-y-1.5 list-disc list-inside">
+                <li>전 구역 일반 규격보다 20cm 넓은 <strong>광폭 주차 라인</strong> 적용</li>
+                <li>식사 고객 대상 <strong>3시간 무료 주차권</strong> 자동 등록</li>
+                <li>주말 및 공휴일 전담 주차 안내 요원 상시 배치</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="pt-6">
+            <button onclick="openKakaoMapModal()" class="w-full py-3.5 rounded-xl bg-[#fae100] text-[#371d1e] font-bold text-sm tracking-wide hover:bg-[#ebd300] transition flex items-center justify-center gap-2 shadow-lg">
+              <i class="fa-solid fa-diamond-turn-right text-base"></i> 카카오맵 길찾기 시작
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       10. Reservation & CTA Modal trigger section
+  ============================================== -->
+  <section id="reservation" class="py-24 relative bg-gradient-to-t from-[#08120e] to-[#0a1612] border-t border-brand-gold/15">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Table Reservation</span>
+      <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-2 mb-4">
+        대청호 호수뷰와 함께하는 <span class="gold-gradient-text">특별한 하루</span>
+      </h2>
+      <p class="text-zinc-300 text-sm sm:text-base max-w-2xl mx-auto font-light mb-8">
+        주말 및 노을 시간대(17:30~19:00)는 창가 명당 좌석 예약이 조기 마감될 수 있습니다.<br class="hidden sm:inline" />
+        네이버 실시간 예약으로 간편하게 좌석을 선점하세요.
+      </p>
+
+      <!-- Interactive Booking Panel Card -->
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border border-brand-gold/30 text-left max-w-3xl mx-auto shadow-2xl">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+          <div>
+            <label class="block text-xs text-brand-gold font-medium mb-1.5">방문 날짜</label>
+            <input type="date" id="bookingDate" class="w-full bg-[#11241c] border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold" />
+          </div>
+          <div>
+            <label class="block text-xs text-brand-gold font-medium mb-1.5">희망 시간대</label>
+            <select id="bookingTime" class="w-full bg-[#11241c] border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+              <option value="12:00">런치 (12:00) - 윤슬 호수뷰</option>
+              <option value="13:00">런치 (13:00) - 여유로운 식사</option>
+              <option value="17:30" selected>디너 (17:30) - ★노을 골든아워</option>
+              <option value="18:30">디너 (18:30) - ★석양 & 와인나잇</option>
+              <option value="19:30">나이트 (19:30) - 로맨틱 캔들라이트</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs text-brand-gold font-medium mb-1.5">방문 인원</label>
+            <select id="bookingGuests" class="w-full bg-[#11241c] border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-gold">
+              <option value="2">2인 (커플 데이트석)</option>
+              <option value="3">3~4인 (친구/가족석)</option>
+              <option value="6">5~8인 (창가 단체 부스)</option>
+              <option value="group">9인 이상 (프라이빗 룸)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/10">
+          <div class="text-xs text-zinc-400">
+            <span class="text-emerald-400 font-semibold">● 예약 시 혜택:</span> 대청호 창가석 우선 배정 & 웰컴 드링크 쿠폰 제공
+          </div>
+          <button onclick="handleBookingSubmit()" class="w-full sm:w-auto gold-btn-gradient text-neutral-950 font-bold px-8 py-3.5 rounded-xl text-sm tracking-wide flex items-center justify-center gap-2">
+            <span class="w-4 h-4 bg-emerald-700 text-white rounded-sm inline-flex items-center justify-center text-[10px] font-black">N</span>
+            네이버 실시간 예약 진행하기
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==============================================
+       11. Footer
+  ============================================== -->
+  <footer class="bg-[#060c09] text-zinc-400 text-xs py-14 border-t border-white/10 pb-28 md:pb-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full border border-brand-gold/40 flex items-center justify-center bg-[#0a1612]">
+              <i class="fa-solid fa-wine-glass text-brand-gold text-sm"></i>
+            </div>
+            <span class="font-serif text-2xl tracking-widest font-bold text-white">ODYSSEY</span>
+          </div>
+          <p class="text-zinc-400 text-xs leading-relaxed max-w-md">
+            대청호 호수뷰를 품은 프리미엄 소고기 뷔페 & 와인 다이닝 식당 '오디세이'.<br />
+            2030 세대의 낭만적인 드라이브와 데이트, 특별한 기념일을 위한 최고의 미식 공간입니다.
+          </p>
+          <div class="flex items-center gap-4 text-zinc-400 pt-2">
+            <a href="https://instagram.com" target="_blank" class="hover:text-pink-400 text-lg transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="hover:text-emerald-400 text-lg transition" aria-label="Naver Blog"><i class="fa-solid fa-blog"></i></a>
+            <a href="#" class="hover:text-[#fae100] text-lg transition" aria-label="Kakao Channel"><i class="fa-solid fa-comment"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Business Info -->
+        <div class="space-y-2">
+          <h5 class="text-white text-sm font-semibold mb-3 font-serif tracking-wider">매장 안내</h5>
+          <p>상호명: 오디세이 (ODYSSEY)</p>
+          <p>대표메뉴: 비법 양념 소고기 불고기 & 와인</p>
+          <p>주소: 대전 대덕구 대청호수로 1234 오디세이빌딩 전층</p>
+          <p>전화: 042-863-9999</p>
+          <p>주차: 매장 전용 100대 광폭 무료 주차</p>
+        </div>
+
+        <!-- Col 3: Operating Hours -->
+        <div class="space-y-2">
+          <h5 class="text-white text-sm font-semibold mb-3 font-serif tracking-wider">영업 시간</h5>
+          <p>월 ~ 일: 11:30 - 21:30</p>
+          <p>런치 타임: 11:30 - 15:00</p>
+          <p>브레이크 타임: 15:30 - 17:00 (주말 제외)</p>
+          <p>디너 & 노을 타임: 17:00 - 21:30</p>
+          <p class="text-brand-gold pt-1">★ 연중무휴 정상 영업</p>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-zinc-500">
+        <div>&copy; 2026 ODYSSEY Dining & Lakeview Lounge. All rights reserved.</div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">이용약관</a>
+          <a href="#" class="hover:underline">개인정보처리방침</a>
+          <a href="#" class="hover:underline">오시는 길</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       12. Mobile Sticky Bottom Action Bar (2030 모바일 필수 전환 UX)
+  ============================================== -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-[#0a1612]/95 backdrop-blur-xl border-t border-brand-gold/25 px-4 py-2.5 flex items-center justify-between gap-2 shadow-2xl">
+    <!-- 전화 연결 -->
+    <a href="tel:042-863-9999" class="flex-1 py-2.5 rounded-xl bg-white/10 text-zinc-200 text-xs font-semibold flex flex-col items-center justify-center">
+      <i class="fa-solid fa-phone text-xs mb-0.5 text-brand-gold"></i>
+      전화 문의
+    </a>
+
+    <!-- 카카오맵 길찾기 -->
+    <button onclick="openKakaoMapModal()" class="flex-1 py-2.5 rounded-xl bg-[#fae100] text-[#371d1e] text-xs font-bold flex flex-col items-center justify-center">
+      <i class="fa-solid fa-car text-xs mb-0.5"></i>
+      주차·길찾기
+    </button>
+
+    <!-- 네이버 예약 -->
+    <button onclick="openBookingModal('mobile-bottom')" class="flex-[1.5] py-2.5 rounded-xl gold-btn-gradient text-neutral-950 text-xs font-black flex items-center justify-center gap-1.5 shadow-md">
+      <span class="w-3.5 h-3.5 bg-emerald-700 text-white rounded-sm inline-flex items-center justify-center text-[9px] font-black">N</span>
+      실시간 창가석 예약
+    </button>
+  </div>
+
+  <!-- ==============================================
+       13. Interactive Modals (예약, 카카오맵, 인스타 팝업)
+  ============================================== -->
+  
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="glass-card rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-brand-gold/40 relative animate-fadeIn shadow-2xl">
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-zinc-400 hover:text-white text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="flex items-center gap-2 text-brand-gold text-xs font-semibold uppercase mb-1">
+        <i class="fa-solid fa-sparkles"></i> 실시간 네이버 스마트플레이스 연동
+      </div>
+      <h3 class="text-xl sm:text-2xl font-bold font-serif text-white mb-2">오디세이 창가석 예약</h3>
+      <p class="text-xs text-zinc-400 mb-6">원하시는 코스와 방문 일정을 선택하시면 네이버 실시간 예약 페이지로 즉시 연결됩니다.</p>
+
+      <div class="space-y-4 text-xs sm:text-sm">
+        <div>
+          <label class="block text-zinc-300 font-medium mb-1">선택 코스</label>
+          <select id="modalCourseSelect" class="w-full bg-[#11241c] border border-white/10 rounded-xl px-3.5 py-2.5 text-white">
+            <option value="signature">Signature Dinner & Weekend (48,000원) - 대표 추천</option>
+            <option value="vip">VIP Wine Package (68,000원) - 창가석 확정</option>
+            <option value="lunch">Odyssey Lunch Special (28,000원)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-zinc-300 font-medium mb-1">방문 날짜 및 시간대</label>
+          <div class="grid grid-cols-2 gap-2">
+            <input type="date" id="modalDate" class="bg-[#11241c] border border-white/10 rounded-xl px-3 py-2 text-white text-xs" />
+            <select id="modalTime" class="bg-[#11241c] border border-white/10 rounded-xl px-3 py-2 text-white text-xs">
+              <option>12:00 (런치 호수뷰)</option>
+              <option selected>17:30 (★석양 노을뷰)</option>
+              <option>18:30 (★골든아워 디너)</option>
+              <option>19:30 (로맨틱 나이트)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="p-3 rounded-xl bg-brand-gold/10 border border-brand-gold/20 text-xs text-brand-goldLight">
+          <i class="fa-solid fa-bell mr-1"></i> 당일 예약 및 8인 이상 단체는 매장(042-863-9999)으로 전화 주시면 더욱 빠른 안내가 가능합니다.
+        </div>
+      </div>
+
+      <div class="mt-6 flex gap-3">
+        <button onclick="closeBookingModal()" class="flex-1 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-zinc-300 text-xs font-semibold">
+          닫기
+        </button>
+        <button onclick="confirmNaverBooking()" class="flex-[2] py-3 rounded-xl gold-btn-gradient text-neutral-950 font-bold text-xs sm:text-sm flex items-center justify-center gap-2">
+          <span class="w-4 h-4 bg-emerald-700 text-white rounded-sm inline-flex items-center justify-center text-[10px] font-black">N</span>
+          네이버 예약으로 이동
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kakao Map Modal -->
+  <div id="kakaoMapModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="glass-card rounded-3xl max-w-md w-full p-6 border border-brand-gold/40 relative shadow-2xl">
+      <button onclick="closeKakaoMapModal()" class="absolute top-5 right-5 text-zinc-400 hover:text-white text-xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="w-10 h-10 rounded-2xl bg-[#fae100] text-[#371d1e] flex items-center justify-center text-xl mb-4 font-bold">
+        <i class="fa-solid fa-location-arrow"></i>
+      </div>
+      <h3 class="text-xl font-bold text-white mb-1">카카오맵 내비게이션 안내</h3>
+      <p class="text-xs text-zinc-400 mb-6">내비 앱을 통해 바로 오디세이 100대 광폭 전용 주차장으로 안내받으실 수 있습니다.</p>
+
+      <div class="space-y-3 mb-6 text-xs">
+        <div class="p-3 bg-[#11241c] rounded-xl flex items-center justify-between">
+          <span class="text-zinc-300">목적지</span>
+          <strong class="text-white">대청호 오디세이 소고기 뷔페</strong>
+        </div>
+        <div class="p-3 bg-[#11241c] rounded-xl flex items-center justify-between">
+          <span class="text-zinc-300">주차 요금</span>
+          <strong class="text-emerald-400">무료 (3시간 무료 등록)</strong>
+        </div>
+        <div class="p-3 bg-[#11241c] rounded-xl flex items-center justify-between">
+          <span class="text-zinc-300">주차 공간</span>
+          <strong class="text-white">100대 동시 주차 가능 (초보 환영)</strong>
+        </div>
+      </div>
+
+      <button onclick="alert('카카오맵 앱/웹 내비게이션 길안내로 연결됩니다.\n목적지: 대청호 오디세이')" class="w-full py-3 rounded-xl bg-[#fae100] text-[#371d1e] font-bold text-sm hover:bg-[#ebd300] transition">
+        카카오맵 길찾기 시작하기
+      </button>
+    </div>
+  </div>
+
+  <!-- Instagram Photo Modal -->
+  <div id="instaModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card rounded-3xl max-w-lg w-full overflow-hidden border border-white/20 relative shadow-2xl">
+      <button onclick="closeInstaModal()" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center text-sm">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="h-64 sm:h-72 w-full overflow-hidden">
+        <img id="instaModalImg" src="" alt="인스타그램 사진" class="w-full h-full object-cover" />
+      </div>
+
+      <div class="p-6">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="w-7 h-7 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 flex items-center justify-center text-white text-xs">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+          <span id="instaModalUser" class="font-bold text-white text-sm"></span>
+        </div>
+        <p id="instaModalText" class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-light mb-4"></p>
+        <div class="text-[11px] text-zinc-500">
+          #대청호맛집 #오디세이 #대청호소고기뷔페 #대전데이트코스 #와인스타그램
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       JavaScript Interactions & State Handling
+  ============================================== -->
+  <script>
+    // 오늘 날짜를 기본값으로 설정
+    document.addEventListener('DOMContentLoaded', () => {
+      const today = new Date().toISOString().split('T')[0];
+      const dateInput = document.getElementById('bookingDate');
+      const modalDateInput = document.getElementById('modalDate');
+      if (dateInput) dateInput.value = today;
+      if (modalDateInput) modalDateInput.value = today;
+    });
+
+    // 모바일 메뉴 토글
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+    }
+
+    // 헤더 스크롤 효과
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('mainHeader');
+      if (window.scrollY > 40) {
+        header.classList.add('shadow-xl', 'bg-[#0a1612]/95');
+      } else {
+        header.classList.remove('shadow-xl', 'bg-[#0a1612]/95');
+      }
+    });
+
+    // Hero Mood Switcher (노을 / 낮 / 밤)
+    function setHeroMood(mood) {
+      const btnSunset = document.getElementById('btnMoodSunset');
+      const btnDay = document.getElementById('btnMoodDay');
+      const btnNight = document.getElementById('btnMoodNight');
+
+      // 리셋
+      [btnSunset, btnDay, btnNight].forEach(btn => {
+        btn.className = 'px-2.5 py-1 rounded-full text-xs font-semibold text-zinc-400 hover:text-white transition';
+      });
+
+      if (mood === 'sunset') {
+        btnSunset.className = 'px-2.5 py-1 rounded-full text-xs font-semibold bg-brand-gold/20 text-brand-goldLight border border-brand-gold/40 transition';
+        document.body.className = 'bg-[#0a1612] text-zinc-100 font-sans antialiased selection:bg-brand-gold selection:text-black sunset-mode';
+      } else if (mood === 'day') {
+        btnDay.className = 'px-2.5 py-1 rounded-full text-xs font-semibold bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 transition';
+        document.body.className = 'bg-[#091512] text-zinc-100 font-sans antialiased selection:bg-cyan-400 selection:text-black';
+      } else if (mood === 'night') {
+        btnNight.className = 'px-2.5 py-1 rounded-full text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/40 transition';
+        document.body.className = 'bg-[#060e0c] text-zinc-100 font-sans antialiased selection:bg-purple-400 selection:text-black night-mode';
+      }
+    }
+
+    // Wine Pairing Dynamic Display Switcher
+    const wineData = {
+      red: {
+        title: '샤토 오디세이 리저브 카베르네 소비뇽',
+        sub: 'Château Odyssey Cabernet Sauvignon (France)',
+        tag: 'Full-bodied Red Wine',
+        badgeClass: 'bg-rose-950 text-rose-300 border-rose-500/30',
+        desc: '달콤 짭조름한 소고기 불고기의 육즙을 벨벳 같은 탄닌과 짙은 블랙베리, 바닐라 오크 풍미로 감싸주어 최상의 밸런스를 이룹니다.',
+        price: '글래스 9,000원 / 바틀 45,000원부터 (VIP 패키지 포함)'
+      },
+      white: {
+        title: '오디세이 샤르도네 그랑 리저브',
+        sub: 'Odyssey Premium Chardonnay (California, US)',
+        tag: 'Crisp White Wine',
+        badgeClass: 'bg-amber-950 text-amber-300 border-amber-500/30',
+        desc: '산뜻한 시트러스와 은은한 버터 풍미가 입안을 산뜻하게 리프레시하여, 소고기 뷔페와 샐러드바를 더욱 깔끔하게 즐기기에 최적입니다.',
+        price: '글래스 9,000원 / 바틀 42,000원부터'
+      },
+      sparkling: {
+        title: '선셋 뀌베 브뤼 스파클링 와인',
+        sub: 'Sunset Cuvée Brut (Italy Prosecco / Non-Alcohol Option)',
+        tag: 'Sunset Sparkling Wine',
+        badgeClass: 'bg-emerald-950 text-emerald-300 border-emerald-500/30',
+        desc: '황금빛으로 부서지는 대청호 노을을 닮은 청량한 기포감. 특별한 기념일과 데이트의 첫 잔으로 가장 사랑받는 셀렉션입니다.',
+        price: '글래스 10,000원 / 바틀 48,000원 (운전자를 위한 논알콜 선택 가능)'
+      }
+    };
+
+    function selectWinePairing(type) {
+      const item = wineData[type];
+      const card = document.getElementById('wineDisplayCard');
+      
+      const btnRed = document.getElementById('btnWineRed');
+      const btnWhite = document.getElementById('btnWineWhite');
+      const btnSparkling = document.getElementById('btnWineSparkling');
+
+      [btnRed, btnWhite, btnSparkling].forEach(btn => {
+        btn.className = 'px-3.5 py-1.5 rounded-full text-xs font-semibold bg-zinc-800/80 text-zinc-300 border border-white/10 hover:border-brand-gold transition';
+      });
+
+      if (type === 'red') {
+        btnRed.className = 'px-3.5 py-1.5 rounded-full text-xs font-semibold bg-rose-950/80 text-rose-200 border border-rose-500/50 transition';
+      } else if (type === 'white') {
+        btnWhite.className = 'px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-950/80 text-amber-200 border border-amber-500/50 transition';
+      } else if (type === 'sparkling') {
+        btnSparkling.className = 'px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-200 border border-emerald-500/50 transition';
+      }
+
+      card.innerHTML = `
+        <div class="flex items-start justify-between">
+          <div>
+            <span class="text-[11px] text-brand-gold font-medium">소믈리에 추천 마리아주</span>
+            <h5 class="text-base sm:text-lg font-bold text-white mt-0.5">${item.title}</h5>
+            <p class="text-xs text-zinc-400 mt-0.5">${item.sub}</p>
+          </div>
+          <span class="text-xs font-bold px-2.5 py-1 rounded border ${item.badgeClass}">${item.tag}</span>
+        </div>
+        
+        <p class="text-xs text-zinc-300 mt-3 leading-relaxed">
+          ${item.desc}
+        </p>
+
+        <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs">
+          <span class="text-zinc-400">${item.price}</span>
+          <span class="text-brand-gold font-semibold">VIP 패키지 시 1글라스 무료 포함</span>
+        </div>
+      `;
+    }
+
+    // Modal Controls
+    function openBookingModal(course = 'signature') {
+      const modal = document.getElementById('bookingModal');
+      const select = document.getElementById('modalCourseSelect');
+      if (select) {
+        if (course.includes('lunch')) select.value = 'lunch';
+        else if (course.includes('vip')) select.value = 'vip';
+        else select.value = 'signature';
+      }
+      modal.classList.remove('hidden');
+    }
+
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+
+    function confirmNaverBooking() {
+      alert('오디세이 네이버 스마트플레이스 예약 페이지로 이동합니다.\n대청호 창가 명당석을 선점하세요!');
+      closeBookingModal();
+    }
+
+    function handleBookingSubmit() {
+      const date = document.getElementById('bookingDate').value;
+      const time = document.getElementById('bookingTime').value;
+      const guests = document.getElementById('bookingGuests').value;
+      alert(`[오디세이 창가석 실시간 예약 신청]\n- 일정: ${date} ${time}\n- 인원: ${guests}\n\n네이버 예약 시스템과 실시간 연동되어 확인 알림톡이 발송됩니다.`);
+    }
+
+    function openKakaoMapModal() {
+      document.getElementById('kakaoMapModal').classList.remove('hidden');
+    }
+
+    function closeKakaoMapModal() {
+      document.getElementById('kakaoMapModal').classList.add('hidden');
+    }
+
+    // Instagram Modal
+    function openInstaModal(username, text, imgSrc) {
+      document.getElementById('instaModalUser').innerText = '@' + username;
+      document.getElementById('instaModalText').innerText = text;
+      document.getElementById('instaModalImg').src = imgSrc;
+      document.getElementById('instaModal').classList.remove('hidden');
+    }
+
+    function closeInstaModal() {
+      document.getElementById('instaModal').classList.add('hidden');
+    }
+
+    // 해시태그 복사
+    function copyHashTags() {
+      const tags = '#오디세이 #대청호맛집 #대청호소고기뷔페 #대청호드라이브 #대전데이트코스 #와인다이닝';
+      navigator.clipboard.writeText(tags).then(() => {
+        alert('해시태그가 복사되었습니다:\n' + tags);
+      }).catch(() => {
+        alert('해시태그: ' + tags);
+      });
+    }
+
+    // ESC 키 모달 닫기
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeBookingModal();
+        closeKakaoMapModal();
+        closeInstaModal();
+      }
+    });
+  </script>
+
+</body>
+</html>
